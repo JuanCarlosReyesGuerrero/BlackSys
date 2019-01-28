@@ -1,0 +1,89 @@
+﻿@model BlackSys.Models.Ars
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Ars</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ArsCodigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArsCodigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArsNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArsNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArsActivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArsActivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InstitucionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InstitucionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArsUsuarioRegistra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArsUsuarioRegistra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArsFechaRegistro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArsFechaRegistro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArsUsuarioModifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArsUsuarioModifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArsFechaModifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArsFechaModifica)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
